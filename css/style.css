@@ -1,0 +1,573 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  max-width: 1400px;
+  width: 90%;
+  /* border: 2px solid red; */
+  margin: auto;
+  /* overflow-x: auto; */
+}
+/* ########################### NavBar Styling ################  */
+.navbar-container input[type="checkbox"],
+.navbar-container .hamburger-lines {
+  /* display: none; */
+}
+
+.navbar {
+  position: absolute;
+  width: 100%;
+}
+.navbar-container {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  height: 64px;
+  /* padding: 0 50px; */
+  position: relative;
+  /* border: 2px solid green; */
+}
+.navbar .menu-items a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #fff;
+  font-size: 1.6rem;
+  /* margin-left: 4rem; */
+}
+.menu-items li {
+  list-style: none;
+  display: inline-block;
+  padding: 0 2rem;
+  /* border-bottom: 1px solid black; */
+}
+.navbar .menu-items a:hover {
+  color: rgb(97, 116, 97);
+}
+.navbar .logo {
+  filter: invert(100%);
+  height: 7rem;
+  width: 7rem;
+}
+.menu-items {
+  position: absolute;
+  right: 12rem;
+}
+/* ######################### hamburger styling ############ */
+.gym-ham-items {
+  /* transform: translate(250%); */
+  transition: transform 0.4s ease-in-out;
+  padding-top: 5rem;
+  margin-top: 25rem;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  background: black;
+  color: #fff;
+  display: none;
+  max-width: 20rem;
+  width: 90%;
+  /* text-align: center; */
+  /* border: 2px solid red; */
+}
+.gym-ham-items li {
+  list-style: none;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+.gym-ham-items a {
+  text-decoration: none;
+  color: rgb(237, 218, 218);
+}
+.gym-ham-items a:hover {
+  color: rgb(97, 116, 97);
+}
+.navbar-container input[type="checkbox"]:checked ~ .gym-ham-items {
+  display: block;
+  /* transform: translateX(70%); */
+  right: 1rem;
+  position: absolute;
+}
+.navbar-container input[type="checkbox"] {
+  width: 3.2rem;
+  height: 2.6rem;
+  position: absolute;
+  top: 2.0rem;
+  right: 6.0rem;
+  display: block;
+  z-index: 5;
+  opacity: 0;
+}
+.hamburger-lines {
+  display: block;
+  width: 3.2rem;
+  height: 2.6rem;
+  position: absolute;
+  top: 2.0rem;
+  right: 6.0rem;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.4s ease-in-out;
+}
+.hamburger-lines .line {
+  height: 4px;
+  width: 100%;
+  /* color: #fff; */
+  background: #fff;
+  display: block;
+  border-radius: 1rem;
+  /* position: relative; */
+}
+
+/* .navbar-container input[type="checkbox"]:checked~.hamburger-lines .line{
+  background: #fff;
+} */
+.hamburger-lines .line1 {
+  transform-origin: 0% 0%;
+  transition: transform 0.4s ease-in-out;
+}
+.hamburger-lines .line3 {
+  transform-origin: 0% 100%;
+  transition: transform 0.4s ease-in-out;
+}
+.navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+  transform: rotate(45deg);
+}
+.navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+  display: none;
+}
+.navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+  transform: rotate(-45deg);
+}
+
+/* ############################### showcase styling ####################  */
+
+.showcase-area {
+  height: 80vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
+    url(../image/bg.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* width: 100vh; */
+}
+.showcase-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+.showcase-heading {
+  text-transform: uppercase;
+}
+
+/* ########################## Button Styling ######################  */
+
+.btn {
+  display: inline-block;
+  padding: 0.6em 2.5em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  border: 2px solid #fff;
+}
+.btn:hover {
+  background: black;
+  color: white;
+}
+
+/* ################# extras styling ########### */
+#extras {
+  padding: 2em 0;
+  background: #fff;
+}
+.extras-container {
+  display: flex;
+  padding: 2em;
+  margin: auto;
+  text-align: center;
+  /* flex-wrap: wrap; */
+}
+.extras-box {
+  padding: 2rem;
+  font-size: 1.6rem;
+}
+.star-rating {
+  color: rgb(128, 128, 128);
+  padding-bottom: 1.5rem;
+}
+.extras-heading {
+  font-weight: 500;
+}
+/* ################################### About styling ######################### */
+#about {
+  padding: 5em 0;
+  background: #f5f5f7;
+
+  /* overflow: hidden; */
+}
+.about-wrapper {
+  display: flex;
+  /* flex-wrap: wrap; */
+  position: relative;
+  z-index: 1;
+}
+.about-img {
+  flex: 1 1 400px;
+  /* display: none; */
+  position: relative;
+}
+.about-img .about-frame-img {
+  display: block;
+  height: 600px;
+  object-fit: cover;
+  object-position: center;
+  max-width: 100%;
+  /* margin: auto; */
+  /* margin-left: 190px; */
+  /* padding-left: 16rem; */
+  /* position: relative; */
+  z-index: 2;
+}
+
+.about-img .about-bg-img {
+  display: block;
+  height: 461px;
+  object-fit: cover;
+  object-position: center;
+  max-width: 100%;
+  position: absolute;
+  top: 70px;
+  width: 260px;
+  left: 49px;
+  z-index: 3;
+  filter: brightness(50%);
+}
+/* .about-imgtext{
+    display: block;
+    position: absolute;
+    top: 200px ;
+    left: 260px;
+    color: #fff;
+    z-index: 5;
+    font-size: 1.2rem;
+} */
+.app-display-heading {
+  display: block;
+  position: absolute;
+  top: 300px;
+  left: 87px;
+  z-index: 5;
+  color: #fff;
+  z-index: 5;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.btn-display {
+  display: block;
+  position: absolute;
+  top: 330px;
+  left: 101px;
+  z-index: 5;
+  /* color: #fff; */
+  z-index: 5;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.logo-about {
+  display: block;
+  position: absolute;
+  top: 220px;
+  left: 300px;
+  z-index: 5;
+  filter: invert(100%);
+  /* color: #fff; */
+  z-index: 5;
+  /* font-size: 1.2rem; */
+  /* font-weight: 500; */
+}
+.about-text {
+  flex: 1 1 400px;
+  /* margin: auto; */
+  /* margin-right: 150px; */
+  /* padding-right: 16rem; */
+  margin-top: 75px;
+
+}
+.about-heading {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  /* padding: 1rem 2rem; */
+}
+.about-text p {
+  font-size: 1.4rem;
+  padding-top: 1.5rem;
+
+  /* padding: 1rem 2rem; */
+}
+.dl-logo {
+  display: inline-block;
+  height: 3.8rem;
+  margin-top: 1.5rem;
+}
+
+/* ########################################## Testimonial styling #################################  */
+
+#testimonial {
+  z-index: 10;
+}
+.testimonial {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../image/Main\ background.jpg");
+  height: 45vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: -14rem;
+  position: absolute;
+  width: 100%;
+  box-shadow: 5px 5px 10px 2px #555;
+}
+.testimonial-container {
+  display: flex;
+  align-items: center;
+  max-height: 100%;
+  font-size: 1.6rem;
+  color: #fff;
+  height: 45vh;
+  overflow-x: auto;
+}
+.testimonial-container::-webkit-scrollbar {
+  display: none;
+}
+
+.customer {
+  text-align: center;
+  /* border: 2px solid blue; */
+}
+.customer-photo img {
+  display: block;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  margin: auto;
+}
+.customer-text {
+  padding: 1rem;
+  width: 100vw;
+}
+.customer-name {
+  font-family: "Dancing Script", cursive;
+  font-size: 2.5rem;
+  padding: 0.5rem;
+}
+
+/* ##################################### scrollbar menu#########################################  */
+
+/* ################################### category styling ######################## */
+
+#category {
+  margin-top: 20rem;
+}
+.category-container {
+  display: grid;
+  /* justify-content: space-between; */
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 1rem;
+  margin: 0 3rem;
+}
+.category-heading {
+  color: rgb(16, 13, 13);
+  font-size: 2.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 5rem;
+  margin-top: -1rem;
+  /* padding-top:rem; */
+  font-weight: 700;
+}
+.exercise-category {
+  /* display: flex;
+    flex: 1 1 500px;
+    justify-content: space-evenly;
+    margin-bottom: 3rem;
+     */
+  position: relative;
+}
+.category-container img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  /* margin: auto; */
+  filter: brightness(40%);
+  /* z-index: 30; */
+  /* position: relative; */
+  aspect-ratio: 3/2;
+}
+.exercise-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+.exercise-content h2:hover {
+  color: rgb(97, 116, 97);
+}
+
+/* ############################### outlet styling ###########################  */
+
+#outlet {
+  margin-top: 4rem;
+}
+.outlet-container {
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  text-align: center;
+  color: #555;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.outlet-container h2 {
+  text-transform: uppercase;
+}
+
+/* ###################################### footer styling ######################## */
+
+#footer {
+  margin-top: 2rem;
+}
+.footer-container {
+  background-color: #333;
+  color: #f5f5f7;
+  padding: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 300;
+  box-shadow: 5px 2px 2px 2.5px black;
+  text-align: center;
+}
+
+/* ############################# media quaries ##################### */
+@media (max-width: 769px) {
+  html {
+    font-size: 50%;
+  }
+  .extras-container {
+    flex-direction: column;
+  }
+  .about-img {
+    display: none;
+  }
+  .about-text {
+    margin: auto;
+    text-align: center;
+  }
+
+/* .about-bg-img {
+  margin: auto;
+} */
+.testimonial{
+  margin-top:  0;
+}
+#category{
+  margin-top: 62rem;
+}
+.category-heading{
+  margin-bottom: 2rem;
+}
+.extras-box {
+  padding: 1rem;
+  
+}
+.category-container {
+  display: grid;
+  /* justify-content: space-between; */
+  grid-template-columns: repeat(2, auto);
+  grid-gap: 1rem;
+  margin: 0 3rem;
+  font-size: 0.8rem;
+}
+.navbar-container input[type="checkbox"] {
+  
+  top: 3rem;
+  
+}
+.hamburger-lines {
+
+  top: 3rem;
+  
+}
+}
+@media (max-width:500px){
+html{
+  font-size: 40%;
+}
+.navbar-container input[type="checkbox"] {
+  
+  top: 3.5rem;
+  right: 2.0rem;
+  
+}
+.hamburger-lines {
+
+  top: 3.5rem;
+  right: 2.0rem;
+
+  
+}
+#category{
+  margin-top: 65rem;
+}
+.category-heading{
+  margin-bottom: 2rem;
+}
+.menu-items {
+
+  right: 8rem;
+}
+.gym-ham-items{
+  max-width: 125px;
+}
+}
+@media (max-width:450px){
+  #category{
+    margin-top: 70rem;
+  }
+}
+@media (max-width:950px){
+  #category{
+    margin-top: 53rem;
+  }
+}
